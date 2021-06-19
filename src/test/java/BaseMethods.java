@@ -1,6 +1,10 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+
 public class BaseMethods {
     public static String device;
 
@@ -17,7 +21,7 @@ public class BaseMethods {
         options.addArguments("--disable-notifications");
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 
-        driver = new ChromeDriver();
+        ChromeDriver driver = new ChromeDriver();
         driver.get("https://www.hepsiemlak.com/");
         driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 

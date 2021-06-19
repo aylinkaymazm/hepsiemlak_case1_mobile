@@ -1,17 +1,16 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.concurrent.TimeUnit;
 
 public class TestCases extends BaseMethods {
 
+    ChromeDriver driver = new ChromeDriver();
+
     public void btn_satilik_icon(){
         driver.findElement(By.cssSelector("div[class='link-sliding'] a[href='/satilik']")).click();
-    }
-
-    public void btn_city_search (){
-        driver.findElement(By.cssSelector("div[class='list-basetab'] button ~ button")).click();
     }
 
     public void btn_select_city (){
@@ -20,7 +19,7 @@ public class TestCases extends BaseMethods {
 
     public void btn_city_search (){
         driver.findElement(By.cssSelector("option[value='izmir']")).click();
-        driver.findElement(By.cssSelector("div[class='city'] select")).click(); /
+        driver.findElement(By.cssSelector("div[class='city'] select")).click();
     }
 
     public void btn_select_town (){
@@ -58,6 +57,7 @@ public class TestCases extends BaseMethods {
     }
 
     public void btn_select_bina_yasi_1 (){
+
         driver.findElement(By.xpath("//span[text()=\"Sıfır Bina\"]")).click();
     }
 
