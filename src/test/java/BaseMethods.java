@@ -13,7 +13,7 @@ public class BaseMethods {
         device = "mobile";
 
         Map<String, String> mobileEmulation = new HashMap<>();
-        mobileEmulation.put("deviceName", "iPhone 8");
+        mobileEmulation.put("deviceName", "iPhone 7");
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("mobileEmulation", mobileEmulation);
 
