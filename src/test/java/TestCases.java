@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TestCases extends BaseMethods {
 
+    JavascriptExecutor jse = (JavascriptExecutor)driver;
     ChromeDriver driver = new ChromeDriver();
 
     public void btn_satilik_icon(){
@@ -39,11 +40,8 @@ public class TestCases extends BaseMethods {
     }
 
     public void input_priceMin (String cost) throws InterruptedException {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,700)");
         WebElement flag = driver.findElement(By.cssSelector("section[class='price'] > div > div:nth-child(1) >input"));
-
-        js.executeScript("arguments[0].scrollIntoView();", flag);
-
         TimeUnit.SECONDS.sleep(2);
         driver.findElement(By.cssSelector(" section[class='price'] > div > div:nth-child(1) >input")).sendKeys(cost);
     }
