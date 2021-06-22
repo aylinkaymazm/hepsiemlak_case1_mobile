@@ -9,8 +9,8 @@ import static org.openqa.selenium.Keys.TAB;
 
 public class TestSteps extends BaseMethods {
 
+
     JavascriptExecutor jse = (JavascriptExecutor)driver;
-    ChromeDriver driver = new ChromeDriver();
 
     public void anasayfa() {
         String mainPageUrl = getUrl();
